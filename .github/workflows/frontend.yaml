@@ -7,14 +7,14 @@ jobs:
   greet_from_frontend:
     runs-on: ubuntu-latest
     outputs:
-      file: $ {{ steps.run_code.outputs.text }}
+      file: ${{ steps.run_code.outputs.text }}
     steps:
       - name: checkout code
         uses: actions/checkout@v4
 
       - name: run code
         id: run_code
-        run: echo "text = Hello world from Frontend" >> $GITHUB_OUTPUT
+        run: echo "text=Hello world from Frontend" >> "$GITHUB_OUTPUT"
 
       - name: show file contents
         run: cat frontend/hello.txt
