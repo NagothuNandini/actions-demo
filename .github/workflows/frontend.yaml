@@ -1,10 +1,10 @@
-name: "Main workflow"
+name: "Frontend workflow"
 on: 
   push:
     branches: main
 
 jobs:
-  greet_from_main:
+  greet_from_frontend:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
