@@ -1,0 +1,21 @@
+name: reusable_workflow_with_environments
+on:
+  push:
+    branches: main
+
+jobs:
+  environment_dev:
+    uses: ./github/workflows/env.yml
+    with:
+      environment: development
+
+  environment_staging:
+    uses: ./github/workflows/env.yml
+    with:
+      environment: Staging
+
+  environment_production:
+    uses: ./github/workflows/env.yml
+    with:
+      environment: production
+  
