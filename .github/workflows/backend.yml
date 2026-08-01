@@ -1,7 +1,7 @@
 name: "Backend workflow"
 on: 
   push:
-    branches: main
+    paths: backend/**
 
 jobs:
   greet_from_main:
