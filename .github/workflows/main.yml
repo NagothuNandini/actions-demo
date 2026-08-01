@@ -1,7 +1,7 @@
 name: "Main workflow"
 on: 
   push:
-    branches: main
+    paths: main
 
 jobs:
   greet_from_main:
