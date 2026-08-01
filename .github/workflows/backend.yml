@@ -1,7 +1,12 @@
 name: "Backend workflow"
 on: 
-  push:
-    paths: backend/**
+  workflow_call:
+    inputs:
+      environments:
+        required: true
+        type: string
+  #push:
+    #paths: backend/**
 
 jobs:
   greet_from_main:
@@ -11,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: run code
-        run: echo "Hello world from Backend"
+        run: echo "Hello world from ${{ inputs.environments }}"
 
       - name: show file contents
-        run: cat backend/hello.txt
+        run: cat ${{ inputs.environments }}/hello.txt
