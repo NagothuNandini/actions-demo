@@ -24,6 +24,6 @@ jobs:
     needs: greet_from_frontend
     steps:
       - name: xcvbn
-        run: echo ${{ needs.greet_from_frontend.outputs.file }}
+        run: echo "${{ needs.greet_from_frontend.outputs.file }}"
         
       
