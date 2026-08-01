@@ -5,17 +5,17 @@ on:
 
 jobs:
   environment_dev:
-    uses: ./github/workflows/env.yml
+    uses: ./.github/workflows/env.yml
     with:
       environment: development
 
   environment_staging:
-    uses: ./github/workflows/env.yml
+    uses: ./.github/workflows/env.yml
     with:
       environment: Staging
 
   environment_production:
-    uses: ./github/workflows/env.yml
+    uses: ./.github/workflows/env.yml
     with:
       environment: production
   
