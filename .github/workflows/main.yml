@@ -1,0 +1,17 @@
+name: "Main workflow"
+on: 
+  push:
+    branches: main
+
+jobs:
+  greet_from_main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: run code
+        run: "Hello world from main"
+
+      - name: show file contents
+        run: cat hello.txt
