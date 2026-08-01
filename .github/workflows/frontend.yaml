@@ -1,7 +1,7 @@
 name: "Frontend workflow"
 on: 
   push:
-    branches: main
+    paths: frontend/**
 
 jobs:
   greet_from_frontend:
