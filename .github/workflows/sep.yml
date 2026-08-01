@@ -17,7 +17,6 @@ jobs:
 
   environment_production:
     uses: ./.github/workflows/env.yml
-    environment: production
     with:
       environment: production
     
